@@ -1,25 +1,37 @@
-document.getElementById('form')
-    .addEventListener('submit', function(event) {
-    event.preventDefault();
 
 
-//Send email
+function sendEmail() {
+	//Get values
+	let name = document.querySelector(".name").value;
+	let email = document.querySelector(".email").value;
+	let subject = document.querySelector(".subject").value;
+	let message = document.querySelector(".message").value;
 
-function sendEmail(name, email, message) {
-    Email.send({
-        Host: "smtp.gmail.com",
-        Username: "dynamictechwebform@gmail.com",
-        Password: "ifcivfyjjktmmxiy",
-        To: "info@techyana.co.za",
-        From: "dynamictechwebform@gmail.com",
-        Subject: `New Form Entry from ${name}`,
-        Body: `Name: ${name} <br/> Email: ${email} <br/> Message: ${message}`,
-    }).then(message => alert("mail sent successfully"));
-    
+	//Send Mail
+	Email.send({
+	Host: "mail.techyana.co.za",
+	Username : "donotreply@techyana.co.za",
+	Password : "Ricoh1673",
+	To : 'info@techyana.co.za',
+	From : "donotreply@techyana.co.za",
+	Subject : "new form entry",
+	Body : `Name: ${name} <br/> Subject: ${subject} <br/> Message: ${message}`,
+	}).then(
+		message => alert("mail sent successfully")
+	);
+
 }
 
-const inputs = document.querySelectorAll('#name, #email, #message, #subject');
+const btn = document.getElementById('btn');
 
-    inputs.forEach(input => {
+btn.addEventListener('click', function handleClick(event) {
+  // if you are submitting a form
+event.preventDefault();
+
+//Clear Fields
+const inputs = document.querySelectorAll('.name, .email, .subject, .message');
+
+inputs.forEach(input => {
     input.value = '';
-    });
+});
+});
