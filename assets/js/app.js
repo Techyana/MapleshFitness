@@ -11,7 +11,7 @@ function sendEmail() {
 	Email.send({
 	Host: "mail.techyana.co.za",
 	Username : "donotreply@techyana.co.za",
-	Password : "Ricoh1673",
+	Password : "1234567",
 	To : 'info@techyana.co.za',
 	From : "donotreply@techyana.co.za",
 	Subject : "new form entry",
@@ -25,10 +25,10 @@ function sendEmail() {
 const btn = document.getElementById('btn');
 
 btn.addEventListener('click', function handleClick(event) {
-  // if you are submitting a form
+  //Submitting a form
 event.preventDefault();
 
-//Clear Fields
+//Clear Input Fields
 const inputs = document.querySelectorAll('.name, .email, .subject, .message');
 
 inputs.forEach(input => {
