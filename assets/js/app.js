@@ -1,5 +1,3 @@
-
-
 function sendEmail() {
 	//Get values
 	let name = document.querySelector(".name").value;
@@ -11,7 +9,7 @@ function sendEmail() {
 	Email.send({
 	Host: "mail.techyana.co.za",
 	Username : "donotreply@techyana.co.za",
-	Password : "bhele123",
+	Password : "1234567",
 	To : 'info@techyana.co.za',
 	From : "donotreply@techyana.co.za",
 	Subject : "new form entry",
@@ -25,13 +23,14 @@ function sendEmail() {
 const btn = document.getElementById('btn');
 
 btn.addEventListener('click', function handleClick(event) {
-  //Submitting a form
+  // if you are submitting a form
 event.preventDefault();
 
-//Clear Input Fields
+//Clear Fields
 const inputs = document.querySelectorAll('.name, .email, .subject, .message');
 
 inputs.forEach(input => {
     input.value = '';
 });
 });
+
