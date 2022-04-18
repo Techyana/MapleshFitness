@@ -9,9 +9,9 @@ function sendEmail() {
 
 	//Send Mail
 	Email.send({
-	Host: "smtp.gmail.com",
-	Username : "dynamictechwebform@gmail.com",
-	Password : "ricoh123",
+	Host: "mail.techyana.co.za",
+	Username : "donotreply@techyana.co.za",
+	Password : "bhele123",
 	To : 'info@techyana.co.za',
 	From : "donotreply@techyana.co.za",
 	Subject : "new form entry",
